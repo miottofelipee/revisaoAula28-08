@@ -1,16 +1,14 @@
 import { View, Text } from 'react-native'
-import { TouchableOpacity } from 'react-native-web'
-import { useNavigation } from '@react-navigation/native'
+import styles from './styles';
+import MyButton from '../../components/MyButton';
+import Title from '../../components/Title';
 
 export default function Dino() {
 
-  const navigation = useNavigation();
   return (
-    <View>
-      <Text>Dino</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-        <Text>Back to Home</Text>
-      </TouchableOpacity>
+    <View style={styles.container}>
+      <Title title={'Dino'}/>
+      <MyButton screen={'Home'} name={'Back to Home'}/>
     </View>
   )
 }
